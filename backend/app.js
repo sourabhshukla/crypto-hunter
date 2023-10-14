@@ -7,7 +7,7 @@ app.use(express.json());
 app.use(cors());
 app.use("/", routes);
 
-app.listen(8082, () => {
+app.listen(process.env.PORT || 8082, () => {
   console.log(`App is running on port 8082`);
 });
 
