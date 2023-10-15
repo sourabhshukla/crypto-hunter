@@ -23,9 +23,9 @@ const Carousel = () => {
       const { data } = response.data;
       setTrending(data);
     } catch (err) {
-      console.log(err.response.status);
+      //console.log(err.response.status);
       setTrending(trendingData);
-      if (err.response.status === 429) {
+      if (err.response && err.response.status === 429) {
         enqueueSnackbar(`API Rate limit Exceeded`, {
           variant: "error",
           anchorOrigin: { horizontal: "center", vertical: "bottom" },

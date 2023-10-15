@@ -31,8 +31,11 @@ describe("Coins", () => {
     });
   });
   describe("Get Trending Coins Data", () => {
+    let currency = "inr";
     it("should return 200", async () => {
-      const response = await supertest(app).get(`/trending`);
+      const response = await supertest(app).get(
+        `/trending?currency=${currency}`
+      );
       expect(response.status).toEqual(200);
       expect(response.body.success).toEqual(true);
     });

@@ -1,4 +1,4 @@
-const baseUrl = `https://backend-ksfv.onrender.com`;
+const baseUrl = `https://54.242.101.157:8082`;
 
 export const CoinList = (currency) => `${baseUrl}/coins?currency=${currency}`;
 
